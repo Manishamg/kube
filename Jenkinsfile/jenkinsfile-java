@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     environment {
-        APP_NAME = "itc-fmcg"
+        APP_NAME = "test"
         RELEASE = "1.0.0"
-        DOCKER_USR = "devopsawsr"
+        DOCKER_USR = "manisha265"
         DOCKERHUB_CREDENTIALS = credentials('dockerhub')
         IMAGE_TAG = "${RELEASE}-${BUILD_NUMBER}"
     }
