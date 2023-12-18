@@ -15,6 +15,11 @@ pipeline {
                 checkout scm
             }
         }
+        stage("sonar-scanning"){
+            steps {
+                sh "/opt/sonar-scanner/bin/sonar-scanner -X -Dproject.settings=sonar-project.properties"
+            }
+        }
         stage("Build") {
             steps {
                 sh "mvn clean package"
